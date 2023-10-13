@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap");
+
+$primary_color1: #829399;
+$primary_color2: #545f66;
+$primary_color3: #fcedda;
+$primary_color4: #131f33;
+$bg_color: #e8fcc2;
+$black: #000000;
+$white: #ffffff;
+
+$font-family: "Inter", sans-serif;
+
+@mixin flex {
+  display: flex;
+}
+@mixin ul {
+  list-style-type: none;
+}
+
+/* reset styles */
+* {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// test colour, font, partials, mixins, nested properties, vendor prefixes i.e for animation and transformation, extend.
+
+body {
+  font-family: $font-family;
+  background-color: $primary_color1;
+  line-break: auto;
+}
+
+header {
+  background-color: $primary_color3;
+  padding: 0.1em 2em;
+  @include flex();
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    max-width: 30%;
+  }
+
+  .logo img {
+    max-width: 30%;
+    width: 100%;
+  }
+
+  nav ul {
+    flex-basis: 100%;
+    @include flex();
+    @include ul();
+    gap: 2em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary_color4;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+      color: $primary_color2;
+    }
+  }
+}
+
+main {
+  .one {
+    @include flex();
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90svh;
+    max-height: 100svh;
+    margin: auto;
+    padding: 4em;
+  }
+
+  .one .one-left h1 {
+    font-size: 4em;
+    text-transform: capitalize;
+    color: $primary_color4;
+    line-height: 130%;
+    letter-spacing: 0.01032em;
+  }
+
+  .one .one-right {
+    width: 70%;
+  }
+
+  .one .one-left .wrap p.static {
+    font-size: 2em;
+    color: $bg_color;
+    line-height: 120%;
+  }
+  .wrap {
+    @include flex();
+    margin-bottom: 1.5em;
+  }
+  .wrap .dynamic {
+    overflow-y: hidden;
+    height: 2em;
+  }
+
+  .wrap .dynamic span {
+    display: block;
+    padding-left: 0.3em;
+    font-weight: 600;
+    color: $primary_color4;
+    font-size: 2em;
+    animation: move 6s infinite;
+    line-height: 120%;
+  }
+
+  @keyframes move {
+    10% {
+      transform: translateY(-112%);
+    }
+
+    25% {
+      transform: translateY(-100%);
+    }
+
+    35% {
+      transform: translateY(-212%);
+    }
+
+    50% {
+      transform: translateY(-200%);
+    }
+
+    60% {
+      transform: translateY(-312%);
+    }
+
+    75% {
+      transform: translateY(-300%);
+    }
+
+    85% {
+      transform: translateY(-412%);
+    }
+
+    100% {
+      transform: translateY(-400%);
+    }
+  }
+  .one .one-left p.grey {
+    font-size: 1.5em;
+    color: $primary_color2;
+    width: 80%;
+    line-height: 150%;
+    font-weight: 500;
+  }
+}
