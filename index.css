@@ -104,6 +104,11 @@ main .one .one-left h1 {
     font-size: 3em;
   }
 }
+@media (min-width: 1024px) and (max-width: 1439px) {
+  main .one .one-left h1 {
+    font-size: 3em;
+  }
+}
 main .one .one-right {
   width: 70%;
 }
@@ -123,6 +128,11 @@ main .one .one-left .wrap p.static {
   line-height: 120%;
 }
 @media (max-width: 768px) {
+  main .one .one-left .wrap p.static {
+    font-size: 1.4em;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
   main .one .one-left .wrap p.static {
     font-size: 1.4em;
   }
@@ -184,6 +194,11 @@ main .one .one-left p.grey {
   }
 }
 @media (max-width: 768px) {
+  main .one .one-left p.grey {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
   main .one .one-left p.grey {
     font-size: 1em;
   }

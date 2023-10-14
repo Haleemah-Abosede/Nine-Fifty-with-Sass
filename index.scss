@@ -54,6 +54,10 @@ main {
     @include medium-up {
       font-size: 3em;
     }
+
+    @include largish {
+      font-size: 3em;
+    }
   }
 
   .one .one-right {
@@ -76,6 +80,10 @@ main {
     line-height: 120%;
 
     @include medium-up {
+      font-size: 1.4em;
+    }
+
+    @include largish {
       font-size: 1.4em;
     }
   }
@@ -144,6 +152,10 @@ main {
     }
 
     @include medium-up {
+      font-size: 1em;
+    }
+
+    @include largish {
       font-size: 1em;
     }
   }
