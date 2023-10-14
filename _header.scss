@@ -1,0 +1,56 @@
+@import "colors";
+@import "mediaqueries";
+
+header {
+  background-color: $primary_color3;
+  padding: 0.1em calc((100vw - 1200px) / 2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    max-width: 30%;
+    cursor: pointer;
+
+    @include large {
+      padding-left: 1em;
+    }
+
+    @include small-up {
+      max-width: 50%;
+    }
+  }
+
+  .logo img {
+    max-width: 30%;
+  }
+
+  nav ul {
+    cursor: pointer;
+    flex-basis: 100%;
+    display: flex;
+    list-style-type: none;
+    gap: 2em;
+
+    @include large {
+      padding-right: 1em;
+    }
+
+    @include medium-up {
+      display: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $primary_color4;
+    font-size: 1em;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+      text-decoration: underline;
+      color: $primary_color2;
+    }
+  }
+}
